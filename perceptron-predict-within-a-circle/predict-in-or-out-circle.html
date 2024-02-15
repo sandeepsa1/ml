@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<canvas id="cBoard" width="400px" height="400px" style="width:100%;max-width:400px;border:1px solid black"></canvas>
+
+<script>
+
+//Perceptron class with train and activite functions
+class Perceptron {
+	constructor() {
+		this.weightLen = 3; //x, y, bias
+		this.weights = [];
+		this.learnConst = 0.00001;
+		this.bias = 1;		
+		this.weights[0] = Math.random() * 2 - 1; // To get +ve and -ve values
+		this.weights[1] = Math.random() * 2 - 1;
+		this.weights[2] = Math.random() * 2 - 1;
+	}
+
+	//checking for a formula. Here we check if sum > 0. If > 0 above, else below
+	activate(inputs) {
+		let sum = 0;
+		for (let i = 0; i < inputs.length; i++) {
+			sum += inputs[i] * this.weights[i]
+		}
+		if(sum > 0)
+			return 1
+		else
+			return 0
+	}
+
+	train(inputs, desired) {
+		inputs.push(this.bias)
+		let guess = this.activate(inputs);
+		let error = desired - guess;	//0, 1, -1
+		if (error != 0) {
+			for (let i = 0; i < inputs.length; i++) {
+				this.weights[i] += this.learnConst * error * inputs[i]
+			}
+		}
+	}	
+}
+
+//Generate a set of random points to train the system
+const points = 500;
+let canvas = document.getElementById("cBoard");
+canvas.width = 400;
+canvas.height = 400;
+var ctx = canvas.getContext("2d");
+xP = [];
+yP = [];
+
+for (let i = 0; i < points; i++) {
+	xP[i] = Math.random() * canvas.width;
+	yP[i] = Math.random() * canvas.height;
+}
+
+//Set points for a random circle
+r = Math.max(Math.floor(Math.random() * canvas.width/4), 75);
+const circle = {
+	x: Math.floor( (canvas.width - r*2) / 2),
+	y: Math.floor( (canvas.width - r*2) / 2),
+	radius: r,
+};
+
+//Function to draw a circle
+function drawCircle() {
+	ctx.beginPath();
+	ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+	ctx.stroke();
+}
+
+// Function to draw the tangent line and perpendicular line
+var perpendicularSlope = 0
+var perpendicularIntercept = 0
+var position = 0
+var lines = [];
+function drawTangentLine(angleNo, pos) {
+	const angle = angleNo * Math.PI * 2; // Random angle for the tangent line
+
+	const tangentX = circle.x + circle.radius * Math.cos(angle);
+	const tangentY = circle.y + circle.radius * Math.sin(angle);
+
+	// Draw the tangent line
+	//ctx.beginPath();
+	//ctx.moveTo(circle.x, circle.y);
+	//ctx.lineTo(tangentX, tangentY);
+	//ctx.stroke();
+
+	// Draw the perpendicular line
+	const dx = tangentX - circle.x;
+	const dy = tangentY - circle.y;
+
+	perpendicularSlope = -1 / (dy / dx); // Slope of the perpendicular line
+	perpendicularIntercept = tangentY - perpendicularSlope * tangentX; // Y-intercept
+
+	// Draw the perpendicular line
+	//ctx.beginPath();
+	//ctx.moveTo(0, perpendicularIntercept);
+	//ctx.lineTo(canvas.width, perpendicularSlope * canvas.width + perpendicularIntercept);
+	//ctx.stroke();
+
+	// Determine the plane
+	position = perpendicularSlope * circle.x + perpendicularIntercept - circle.y;
+	
+	y2 = f(canvas.width, perpendicularSlope, perpendicularIntercept);
+	//x1, y1, x2, y2, slope, bias, pos of circle
+	lines[pos] = [0, perpendicularIntercept, canvas.width, y2, perpendicularSlope, perpendicularIntercept, position];
+}
+
+// Draw the circle and tangent line with a perpendicular line
+drawCircle();
+//drawTangentLine(0.0001,0);
+var splits = 32;//Number of tangents
+var increments = (1 / splits).toFixed(5);
+var angleNo = parseFloat(0.0001);//A slope to avoid a horizondal or vertical line
+for (let i = 0; i < splits; i++) {
+	drawTangentLine(angleNo, i);
+	angleNo += parseFloat(increments);
+}
+
+function f(x, slope, intercept) {
+	return x * slope + intercept;
+}
+
+//Training
+ptronObjs = [];
+for (let j = 0; j < lines.length; j++) {
+
+	//desired answers
+	var desired = [];
+	var pC = 0
+	for (let i = 0; i < points; i++) {
+		desired[i] = 0;
+		if(lines[j][6] > 0) {
+			if (yP[i] < f(xP[i], lines[j][4], lines[j][5])) {desired[i] = 1}
+		}
+		else {
+			if (yP[i] > f(xP[i], lines[j][4], lines[j][5])) {desired[i] = 1}
+		}
+	}
+
+	const ptron = new Perceptron();
+	ptronObjs[j] = ptron;
+	countTrain = 0
+	//Training
+	for (let i = 0; i < 10000; i++) {
+		for (let i = 0; i < points; i++) {
+			ptron.train([xP[i], yP[i]], desired[i]);
+			countTrain++;
+		}
+	}
+}
+
+//Display the Result
+for (let i = 0; i < points; i++) {
+	const x = Math.random() * canvas.width;
+	const y = Math.random() * canvas.height;
+	let guess = 1;
+	for (let j = 0; j < lines.length; j++) {
+		guess &&= ptronObjs[j].activate([x, y, ptronObjs[j].bias])
+	}
+	let color = "blue";
+	if (guess == 0) color = "black";
+	ctx.fillStyle = color;
+	ctx.fillRect(x, y, 4, 4);
+}
+
+</script>
+</body>
+
+</html>
