@@ -42,7 +42,7 @@ test = reformatData(test, 1)
 def sigmoid(x): # Activation function
     return 1.0/(1.0+np.exp(-x))
 
-def sigmoidDerivative(x): # Derivative of sigmoid function σ'(X) = σ(X)( 1 - σ(X) ). Used in back propogation formulas
+def sigmoidDerivative(x): # Derivative of sigmoid function σ'(X) = σ(X)( 1 - σ(X) ). Used in back propagation formulas
     return sigmoid(x)*(1-sigmoid(x))
 #------------Sigmoid activation function and its derivative-----------
 
@@ -81,7 +81,7 @@ for i in range(epochs):
     random.shuffle(training) # Shuffle and split to mini batches for SGD
     batches = [training[i:i + batchSize] for i in range(0, len(training), batchSize)]
     
-    """Step 1: Forward propogation.
+    """Step 1: Forward propagation.
     A simple perception works by summing up product of each input and weight + bias x1w1 + x2w2 + ... + xnwn + b.
     This sum is then applied to the activation function (here sigmoid) to get the output value. For example,
     consider first node of the second layer. It has 784 inputs and 784 weights. The summing up logic can beachieved by
@@ -89,11 +89,11 @@ for i in range(epochs):
     This output is the input for the next layer. These calculations are done for all the layers till final output values.
     
     Step 2: Finding the gradient of the output layer
-    Backpropogation algorithm works on 3 important formulas. To find gradient of output layer use first formula,
+    Back propagation algorithm works on 3 important formulas. To find gradient of output layer use first formula,
     δ = ∇C * σ'(z)    ∇C is the difference between final calculated output and the actual output.
                       σ'(z) is the sigmoid derivative of final layer (wx + b)
     
-    Step 3: Back propogate from output to input layers to find the gradients of each layer
+    Step 3: Back propagate from output to input layers to find the gradients of each layer
     Here we use second formula δ = ( (w of next layer)T dot(δ of next layer) ) * σ'(z of the layer)
 
     Step 4: Finaly update biases and weights for each layer according to the third formula
@@ -106,7 +106,7 @@ for i in range(epochs):
         weightGradients = [np.zeros(w.shape) for w in weights]
 
         for x, y in batch:
-            # Step 1: Forward propogation to find outputs. Activation a = σ(wx + b)
+            # Step 1: Forward propagation to find outputs. Activation a = σ(wx + b)
             activation = x
             activations = [x] # list to store all the activations, layer by layer
             zs = [] # list to store all the z vectors, layer by layer
@@ -122,7 +122,7 @@ for i in range(epochs):
             biasGradients[-1] = gradient
             weightGradients[-1] = np.dot(gradient, activations[-2].transpose())
             
-            #Step 3: Back propogate from output to input layers
+            #Step 3: Back propagate from output to input layers
             for layer in range(2, len(layers)):
                 z = zs[-layer]
                 sp = sigmoidDerivative(z)
@@ -131,7 +131,7 @@ for i in range(epochs):
                 biasGradients[-layer] = gradient
                 weightGradients[-layer] = np.dot(gradient, activations[-layer-1].transpose())
 
-        # Step 4: Update weights and biases using gradients calculated for each layer using back propogation
+        # Step 4: Update weights and biases using gradients calculated for each layer using back propagation
         weights = [w-(learningRate/len(batch))*grw for w, grw in zip(weights, weightGradients)] # Formula 3
         biases = [b-(learningRate/len(batch))*grb for b, grb in zip(biases, biasGradients)] # Formula 3
 
