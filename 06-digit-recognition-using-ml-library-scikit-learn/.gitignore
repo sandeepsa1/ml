@@ -1,0 +1,7 @@
+# Virtual Environment
+venv/
+env/
+
+# Dependency files
+requirements.txt
+Pipfile.lock
