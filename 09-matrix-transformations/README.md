@@ -1,5 +1,5 @@
-Matrix Transformations for 2D Shapes
-This project implements matrix transformations of translation, rotation, scaling, and shearing on a 2D shape along the X and Y axes. Each transformation requires a specific size of the transformation matrix:
+Image Transformations for 2D Shapes
+This project implements image transformations of translation, rotation, scaling, and shearing on a 2D shape along the X and Y axes. Each transformation requires a specific size of the transformation matrix:
 
     For translation of a 2D shape, a 3x3 transformation matrix is required.
     For other transformations (rotation, scaling, and shearing), a 2x2 matrix is sufficient.
