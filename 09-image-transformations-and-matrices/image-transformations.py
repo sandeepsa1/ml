@@ -47,6 +47,8 @@ def update_matrix_label():
 # Slider update function
 def update_slider(val):
     global T
+    if(slider_x.val == 0 and slider_y.val == 0): #To fix rotate issue after reset
+        slider_x.val = 0.001
     tx = slider_x.val
     ty = slider_y.val
     rotation = np.radians(slider_rotation.val)
