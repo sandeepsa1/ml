@@ -12,3 +12,4 @@ List of code folders below:
 08-sentiment-analysis-using-rnn			Learn RNN
 09-image-transformations-and-matrices		Learn image transformations and how the associated matrices change values
 10-understanding-image-compression-using-svd	Learn Singular Value Decomposition and doing an image compression sample
+11-reinforcement-learning-q-learning		Trying to understand basic concepts of reinforement learning
