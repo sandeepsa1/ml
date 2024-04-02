@@ -1,4 +1,4 @@
-import gymnasium as gym
+﻿import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -11,20 +11,20 @@ def load_table(filename):
     return q, epsilon
 
 def learn(episodes, train=True):
-    learning_rate = .1
-    discount = .1
-    epsilon_decay = .0001
+    learning_rate = .8
+    discount = .95
+    epsilon = .9
+    epsilon_decay = .0005
     filename = 'q_table.npz'
+    # Set this to True to start new training
+    # False will load already trained q table and epsilon value from saved file to contine training
+    start_new_learning = True
 
     ob = env.observation_space.n
     act = env.action_space.n
     #print((ob, act)) #16, 4
     
-    # Set this to True to start new training
-    # False will load already trained q table and epsilon value from saved file to contine training
-    start_new_learning = True # Loads already trained data if set to false
     if(start_new_learning == True):
-        epsilon = 1
         q = np.zeros((ob, act)) # Inner bracket needed to get 2D 16*4 q space
     else:
         q, epsilon = load_table(filename)
@@ -42,13 +42,14 @@ def learn(episodes, train=True):
             if(train == True and explore < epsilon): # Decide explore or exploit
                 action = env.action_space.sample()
             else:
-                action = np.argmax(q[state,:]) # Select corresponding row in q table for a state and then max
+                action = np.argmax(q[state,:]) # Select corresponding row in q table for a state and then get max
             
             next_state, reward, terminated, truncated, _ = env.step(action)
             
             if(train == True): # Update q table only in trining mode
-                q[state, action] = (1 - learning_rate) * q[state, action] + \
-                    learning_rate * (reward + discount * np.max(q[next_state,:]))
+                #Bellmans Equation : Q(s,a) = Q(s,a) + α * (r + γ * max(Q(s',a')) - Q(s,a))
+                q[state, action] = q[state, action] + learning_rate * \
+                                   ( reward + discount * np.max(q[next_state,:]) - q[state, action])                
 
             state = next_state
             totalreward += reward
@@ -64,7 +65,7 @@ def learn(episodes, train=True):
     return rewards_table
 
 
-episodes = 5
+episodes = 200
 rewards_table = learn(episodes, True)
 #print(rewards_table)
 size = max(episodes // 10, 1)
