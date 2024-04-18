@@ -14,3 +14,4 @@ List of code folders below:
 10-understanding-image-compression-using-svd	Learn Singular Value Decomposition and doing an image compression sample
 11-reinforcement-learning-q-learning		Trying to understand basic concepts of reinforement learning
 12-ensemble-learning-methods-performance...	Performance comparison of different ensemble learning techniques
+13-clustering-kmeans_hierarchical_dbscan	K-means Clustering. Optimal Clusters Selection. Also Hierarchical and DBScan Clustering codes
