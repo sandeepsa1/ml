@@ -15,3 +15,4 @@ List of code folders below:
 11-reinforcement-learning-q-learning		Trying to understand basic concepts of reinforement learning
 12-ensemble-learning-methods-performance...	Performance comparison of different ensemble learning techniques
 13-clustering-kmeans_hierarchical_dbscan	K-means Clustering. Optimal Clusters Selection. Also Hierarchical and DBScan Clustering codes
+14-anamoly-detection-different-approaches	Detect anamolies on normal and time varying data using z-score, moving average and ML based approaches
