@@ -20,6 +20,7 @@ Run the Python scripts to see how Transfer Learning works.
 Requirements
 numpy
 tensorflow
+matplotlib
 
 License
 This code is provided under the MIT License.
