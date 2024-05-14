@@ -19,7 +19,8 @@ Each folder within the repository are separate virtual environments representing
 - [14-anamoly-detection-different-approaches](#14-anamoly-detection-different-approaches)
 - [15-transfer-learning-images](#15-transfer-learning-images)
 - [16-transfer-learning_nlp](#16-transfer-learning_nlp)
-- [17-reinforcement-learning-using-qtable-and-neural-network](#17-reinforcement-learning-using-qtable-and-neural-network	)
+- [17-reinforcement-learning-using-qtable-and-neural-network](#17-reinforcement-learning-using-qtable-and-neural-network)
+- [18-different-optimizers-of-neural-networks-a-comparison](#18-different-optimizers-of-neural-networks-a-comparison)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -72,3 +73,6 @@ Implement transfer learning on NLP using pre-trained word embeddings. This code 
 
 ### 17-reinforcement-learning-using-qtable-and-neural-network
 This repository contains Python scripts implementing reinforcement learning algorithms for training a blue dot to navigate towards a fixed red dot in a 10 by 10 space. The blue dot aims to reach the position of the red dot to receive maximum reward. The distance between the blue and red dots is calculated after each step, and rewards are adjusted accordingly. The goal is to maximize the reward by reaching the red dot within a maximum number of iterations. Implemented in two ways. Using Q-Table to store state-action values and also using Neural Network Q-Learning
+
+### 18-different-optimizers-of-neural-networks-a-comparison
+Repository has Python scripts to compare the performance of different optimizers using TensorFlow and Keras. The code generates random data, defines different neural network models, and then trains the model using different optimizers such as SGD, Adam, RMSprop, Adagrad, and Adadelta. Finally, it plots the loss curves for each optimizer to compare their performance.
