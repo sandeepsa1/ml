@@ -6,8 +6,8 @@ The second code uses a synthetic dataset and defines a neural network model with
 
 ### Usage
 1. Clone this repository to your local machine.
-1. Install the required dependencies by running:
-    pip install tensorflow matplotlib
+1. Enable virtual environment by running scripts\activate
+1. Install the required dependencies.
 1. Run the Python script optimizer_comparison.py.
 1. View the generated plot to compare the loss curves for different optimizers.
 
@@ -25,11 +25,11 @@ The plot displays the loss curves for different optimizers over a fixed number o
 Based on the loss curves, analyze and choose the optimizer that best suits your specific neural network architecture and training dataset.
 
 #### Dependencies
-Python 3.x
-NumPy
-Matplotlib
-Tensorflow
-scikit-learn
+1. Python 3.x
+1. NumPy
+1. Matplotlib
+1. Tensorflow
+1. scikit-learn
 
 #### License
 This project is licensed under the MIT License.
