@@ -8,7 +8,7 @@ The second code uses a synthetic dataset and defines a neural network model with
 1. Clone this repository to your local machine.
 1. Enable virtual environment by running scripts\activate
 1. Install the required dependencies.
-1. Run the Python script optimizer_comparison.py.
+1. Run the Python scripts different-optimizers-1.py and different-optimizers-2.py
 1. View the generated plot to compare the loss curves for different optimizers.
 
 ### Results
