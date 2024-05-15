@@ -21,6 +21,7 @@ Each folder within the repository are separate virtual environments representing
 - [16-transfer-learning_nlp](#16-transfer-learning_nlp)
 - [17-reinforcement-learning-using-qtable-and-neural-network](#17-reinforcement-learning-using-qtable-and-neural-network)
 - [18-different-optimizers-of-neural-networks-a-comparison](#18-different-optimizers-of-neural-networks-a-comparison)
+- [19-different-loss-functions-of-neural-networks-a-comparison](#19-different-loss-functions-of-neural-networks-a-comparison)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -76,3 +77,6 @@ This repository contains Python scripts implementing reinforcement learning algo
 
 ### 18-different-optimizers-of-neural-networks-a-comparison
 Repository has Python scripts to compare the performance of different optimizers using TensorFlow and Keras. The code generates random data, defines different neural network models, and then trains the model using different optimizers such as SGD, Adam, RMSprop, Adagrad, and Adadelta. Finally, it plots the loss curves for each optimizer to compare their performance.
+
+### 19-different-loss-functions-of-neural-networks-a-comparison
+Code to compare the performance of different loss functions in a neural network model using TensorFlow. The code evaluates various loss functions on a synthetic binary classification dataset and plots the training and validation loss over epochs. Loss Functions used are Binary Crossentropy, Hinge, Squared Hinge, Mean Squared Error and Huber.
