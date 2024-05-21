@@ -50,7 +50,7 @@ Activation functions are a critical component of neural networks, determining th
         1. The slope of 𝛼 needs to be determined and can affect performance.
 
 5.  Parametric ReLU (PReLU) Function
-    1. <b>Formula:</b> $\[\text{PReLU}(x) = \begin{cases} x & \text{if } x > 0 \\\alpha x & \text{if } x \leq 0\end{cases}\]$
+    1. <b>Formula:</b> $\[\text{PReLU}(x) = \max(αx, x)\]$
     1. <b>Range:</b> (-∞, ∞)
     1. <b>Usage:</b>
         1. Similar to Leaky ReLU, but 𝛼 is learned during training.
@@ -60,12 +60,7 @@ Activation functions are a critical component of neural networks, determining th
         1. Adds complexity as 𝛼 is a parameter to be learned.
 
 6.  Exponential Linear Unit (ELU) Function
-    1. <b>Formula:</b> $\[$
-$\text{ELU}(x) = \begin{cases}$
-$x & \text{if } x > 0 \\$
-$\alpha (e^x - 1) & \text{if } x \leq 0$
-$\end{cases}$
-$\]$
+    1. <b>Formula:</b> $\[\text{ELU}(x) = \x, if (x > 0): \α(e^x -1), if (x <= 0)\]$
     1. <b>Range:</b> (-𝛼, ∞)
     1. <b>Usage:</b>
         1. Used in hidden layers.
