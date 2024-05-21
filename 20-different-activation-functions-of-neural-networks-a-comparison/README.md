@@ -4,7 +4,7 @@ Activation functions are a critical component of neural networks, determining th
 
 ### Commonly used activation functions and their applications
 1.  Sigmoid Function
-    1. <b>Formula:</b> \[\sigma(x) = \frac{1}{1 + e^{-x}}\]
+    1. <b>Formula:</b> $\[\sigma(x) = \frac{1}{1 + e^{-x}}\]
     1. <b>Range:</b> (0, 1)
     1. <b>Usage:</b>
         1. Commonly used in the output layer for binary classification problems.
@@ -17,7 +17,7 @@ Activation functions are a critical component of neural networks, determining th
         1. Outputs not zero-centered, which can slow down convergence.
 
 2.  Hyperbolic Tangent (Tanh) Function
-    1. <b>Formula:</b> \[\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}\]
+    1. <b>Formula:</b> $$\[\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}\]
     1. <b>Range:</b> (-1, 1)
     1. <b>Usage:</b>
         1. Often used in hidden layers of neural networks.
@@ -28,7 +28,7 @@ Activation functions are a critical component of neural networks, determining th
         1. Can still cause vanishing gradient problem, though less severe than sigmoid.
 
 3.  Rectified Linear Unit (ReLU) Function
-    1. <b>Formula:</b> \[\text{ReLU}(x) = \max(0, x)\]
+    1. <b>Formula:</b> $\[\text{ReLU}(x) = \max(0, x)\]
     1. <b>Range:</b> (-1, ∞)
     1. <b>Usage:</b>
         1. Most widely used activation function in hidden layers.
@@ -40,7 +40,7 @@ Activation functions are a critical component of neural networks, determining th
         1. Can cause "dead neurons" (neurons that output zero and stop learning).
 
 4.  Leaky ReLU Function
-    1. <b>Formula:</b> \[\text{Leaky ReLU}(x) = \begin{cases}
+    1. <b>Formula:</b> $$\[\text{Leaky ReLU}(x) = \begin{cases}
     x & \text{if } x > 0 \
     \\alpha x & \text{otherwise}
 \end{cases}
@@ -54,7 +54,7 @@ Activation functions are a critical component of neural networks, determining th
         1. The slope of 𝛼 needs to be determined and can affect performance.
 
 5.  Parametric ReLU (PReLU) Function
-    1. <b>Formula:</b> \[
+    1. <b>Formula:</b> $\[
 \text{PReLU}(x) = \begin{cases} 
 x & \text{if } x > 0 \\
 \alpha x & \text{if } x \leq 0
@@ -69,7 +69,7 @@ x & \text{if } x > 0 \\
         1. Adds complexity as 𝛼 is a parameter to be learned.
 
 6.  Exponential Linear Unit (ELU) Function
-    1. <b>Formula:</b> \[
+    1. <b>Formula:</b> $$\[
 \text{ELU}(x) = \begin{cases} 
 x & \text{if } x > 0 \\
 \alpha (e^x - 1) & \text{if } x \leq 0
@@ -85,7 +85,7 @@ x & \text{if } x > 0 \\
         1. More computationally expensive than ReLU.
 
 7.  Softmax Function
-    1. <b>Formula:</b> \[
+    1. <b>Formula:</b> $\[
 \text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{n} e^{x_j}}
 \]
     1. <b>Range:</b> (0, 1) for each class, and the sum of outputs is 1.
