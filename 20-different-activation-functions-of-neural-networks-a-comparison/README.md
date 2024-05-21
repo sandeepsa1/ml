@@ -60,7 +60,12 @@ Activation functions are a critical component of neural networks, determining th
         1. Adds complexity as 𝛼 is a parameter to be learned.
 
 6.  Exponential Linear Unit (ELU) Function
-    1. <b>Formula:</b> $\[\text{ELU}(x) = \begin{cases} x & \text{if } x > 0 \\\alpha (e^x - 1) & \text{if } x \leq 0\end{cases}\]$
+    1. <b>Formula:</b> $\[
+\text{ELU}(x) = \begin{cases} 
+x & \text{if } x > 0 \\
+\alpha (e^x - 1) & \text{if } x \leq 0
+\end{cases}
+\]$
     1. <b>Range:</b> (-𝛼, ∞)
     1. <b>Usage:</b>
         1. Used in hidden layers.
@@ -71,7 +76,7 @@ Activation functions are a critical component of neural networks, determining th
         1. More computationally expensive than ReLU.
 
 7.  Softmax Function
-    1. <b>Formula:</b> $$\[\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{n} e^{x_j}}\]$$
+    1. <b>Formula:</b> $\[\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{n} e^{x_j}}\]$
     1. <b>Range:</b> (0, 1) for each class, and the sum of outputs is 1.
     1. <b>Usage:</b>
         1. Used in the output layer of neural networks for multi-class classification.
