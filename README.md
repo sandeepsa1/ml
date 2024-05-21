@@ -83,4 +83,4 @@ Repository has Python scripts to compare the performance of different optimizers
 Code to compare the performance of different loss functions in a neural network model using TensorFlow. The code evaluates various loss functions on a synthetic binary classification dataset and plots the training and validation loss over epochs. Loss Functions used are Binary Crossentropy, Hinge, Squared Hinge, Mean Squared Error and Huber.
 
 ### 20-different-activation-functions-of-neural-networks-a-comparison
-Different activation functions in a neural network and its uses.
+Different activation functions in a neural network and its uses. Different activation functions sigmoid, tanh, relu, leaky relu, elu and softmax are used.
