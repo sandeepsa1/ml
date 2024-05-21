@@ -40,7 +40,7 @@ Activation functions are a critical component of neural networks, determining th
         1. Can cause "dead neurons" (neurons that output zero and stop learning).
 
 4.  Leaky ReLU Function
-    1. <b>Formula:</b> $\[\text{Leaky ReLU}(x) = \begin{cases}    x & \text{if } x > 0 \    \\alpha x & \text{otherwise} \end{cases}\]$
+    1. <b>Formula:</b> $\[\text{Leaky ReLU}(x) = \max(αx, x)(typically, α=0.01)\]$
     1. <b>Range:</b> (-∞, ∞)
     1. <b>Usage:</b>
         1. Used to mitigate the "dying ReLU" problem by allowing a small gradient when the unit is not active.
