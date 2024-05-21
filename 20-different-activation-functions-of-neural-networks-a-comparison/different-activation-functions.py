@@ -30,35 +30,35 @@ histories = {}
 for activation_function in activation_functions:
     print(f'Training with {activation_function} activation function...')
     model = create_model(activation_function)
-    history = model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=4, batch_size=128, verbose=1)
+    history = model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=10, batch_size=128, verbose=1)
     histories[activation_function] = history
 
 plt.figure(figsize=(14, 7))
 plt.subplot(2, 2, 1)
 for activation_function in activation_functions:
-    plt.plot(histories[activation_function].history['accuracy'], label=f'{activation_function} - Train')
-plt.title('Model Accuracy - Training')
+    plt.plot(histories[activation_function].history['accuracy'], label=f'{activation_function}')
+plt.title('Model Accuracy - Train')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 
 plt.subplot(2, 2, 2)
 for activation_function in activation_functions:
-    plt.plot(histories[activation_function].history['val_accuracy'], '--', label=f'{activation_function} - Val')
+    plt.plot(histories[activation_function].history['val_accuracy'], '--', label=f'{activation_function}')
 plt.title('Model Accuracy - Validation')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 
 plt.subplot(2, 2, 3)
 for activation_function in activation_functions:
-    plt.plot(histories[activation_function].history['loss'], label=f'{activation_function} - Train')
-plt.title('Model Loss - Training')
+    plt.plot(histories[activation_function].history['loss'], label=f'{activation_function}')
+plt.title('Model Loss - Train')
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.legend()
 
 plt.subplot(2, 2, 4)
 for activation_function in activation_functions:
-    plt.plot(histories[activation_function].history['val_loss'], '--', label=f'{activation_function} - Val')
+    plt.plot(histories[activation_function].history['val_loss'], '--', label=f'{activation_function}')
 plt.title('Model Loss - Validation')
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
