@@ -24,7 +24,7 @@ def create_model(activation_function):
                   metrics=['accuracy'])
     return model
 
-activation_functions = ['sigmoid', 'tanh', 'relu', 'leaky_relu', 'elu', 'softmax']
+activation_functions = ['sigmoid', 'tanh', 'relu', 'leaky_relu', 'elu'] # 'softmax'
 
 histories = {}
 for activation_function in activation_functions:
@@ -33,7 +33,7 @@ for activation_function in activation_functions:
     history = model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=10, batch_size=128, verbose=1)
     histories[activation_function] = history
 
-plt.figure(figsize=(14, 7))
+plt.figure(figsize=(10, 5))
 plt.subplot(2, 2, 1)
 for activation_function in activation_functions:
     plt.plot(histories[activation_function].history['accuracy'], label=f'{activation_function}')
