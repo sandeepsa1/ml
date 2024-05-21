@@ -4,7 +4,7 @@ Activation functions are a critical component of neural networks, determining th
 
 ### Commonly used activation functions and their applications
 1.  Sigmoid Function
-    1. <b>Formula:</b> $ \[\sigma(x) = \frac{1}{1 + e^{-x}}\] $
+    1. <b>Formula:</b> $\[\sigma(x) = \frac{1}{1 + e^{-x}}\]$
     1. <b>Range:</b> (0, 1)
     1. <b>Usage:</b>
         1. Commonly used in the output layer for binary classification problems.
