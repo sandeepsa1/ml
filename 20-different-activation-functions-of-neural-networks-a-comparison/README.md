@@ -60,7 +60,7 @@ Activation functions are a critical component of neural networks, determining th
         1. Adds complexity as 𝛼 is a parameter to be learned.
 
 6.  Exponential Linear Unit (ELU) Function
-    1. <b>Formula:</b> $\[\text{ELU}(x) = \x, if (x > 0): \α(e^x -1), if (x <= 0)\]$
+    1. <b>Formula:</b> $\[\text{ELU}(x) = x, if (x > 0) or α(e^x -1), if (x <= 0)\]$
     1. <b>Range:</b> (-𝛼, ∞)
     1. <b>Usage:</b>
         1. Used in hidden layers.
@@ -89,34 +89,3 @@ Activation functions are a critical component of neural networks, determining th
     1. ReLU is generally a good default choice.
     2. Leaky ReLU or PReLU can be used to address dying ReLU issues.
     3. ELU can be used if zero-centered output is beneficial and computational cost is not a concern.
-
-
-
-
-### Neural Network Architecture
-The neural network model comprises three hidden layers with 64, 32, and 16 neurons, respectively, using the ReLU activation function. The output layer consists of one neuron with a sigmoid activation function.
-
-### Usage
-1. Clone this repository to your local machine.
-1. Enable virtual environment by running scripts\activate
-1. Install the required dependencies.
-1. Run the Python script different-loss-functions.py
-1. View the generated plot to compare the loss curves for different optimizers.
-
-### Results
-The plot displays the loss curves for different optimizers over a fixed number of training epochs. By observing the plot, you can compare the convergence behavior and training efficiency of each optimizer.
-
-### Loss Functions
-1. sigmoid
-1. tanh
-1. relu
-1. leaky_relu
-1. elu
-
-### Results
-The training and validation accuracy and loss for each activation function are plotted over epochs in separate subplots for comparison.
-
-#### Dependencies
-1. Python 3.x
-1. Matplotlib
-1. Tensorflow
