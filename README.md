@@ -23,6 +23,7 @@ Each folder within the repository are separate virtual environments representing
 - [18-different-optimizers-of-neural-networks-a-comparison](#18-different-optimizers-of-neural-networks-a-comparison)
 - [19-different-loss-functions-of-neural-networks-a-comparison](#19-different-loss-functions-of-neural-networks-a-comparison)
 - [20-different-activation-functions-of-neural-networks-a-comparison](#20-different-activation-functions-of-neural-networks-a-comparison)
+- [21-logistic-regression-using-ml-libraries-and-neural-networks](#21-logistic-regression-using-ml-libraries-and-neural-networks)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -84,3 +85,6 @@ Code to compare the performance of different loss functions in a neural network 
 
 ### 20-different-activation-functions-of-neural-networks-a-comparison
 Different activation functions in a neural network and its uses. Different activation functions sigmoid, tanh, relu, leaky relu and elu are used.
+
+### 21-logistic-regression-using-ml-libraries-and-neural-networks
+This repository contains a simple implementation of logistic regression using machine learning approach and also a neural network to classify whether a given iris flower is of the species "Setosa" or not.
