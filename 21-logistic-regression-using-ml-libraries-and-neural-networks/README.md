@@ -1,14 +1,14 @@
 ## Logistic Regression using Machine Learning and Neural Network Libraries
 Logistic regression is a supervised machine learning algorithm used for binary classification tasks.
-This repository contains a simple implementation of logistic regression using machine learning approach and also a neural network to classify whether a given iris flower is of the species "Setosa" or not.
+This repository contains two simple implementations of logistic regression using machine learning approach and also a neural network to classify whether a given iris flower is of the species "Setosa" or not.
 
 
-1. Using ML approach
-logistic_regression_ml.py
+1. Using ML approach</br>
+logistic_regression_ml.py</br>
 This code demonstrates how to implement logistic regression using Python and the popular machine learning library scikit-learn. Using a dataset called the Iris dataset, which is often used for classification tasks. In this example, classification is done on whether a given iris flower is of the species "Setosa" or not based on its features.
 
-2. Using neural network approach
-logistic_regression_nn.py
+2. Using neural network approach</br>
+logistic_regression_nn.py</br>
 This code demonstrates how to implement logistic regression using neural network library tensorflow. The neural network used in this implementation has a single neuron in the output layer with a sigmoid activation function, which is suitable for binary classification. The Iris dataset from sklearn.datasets is used for this purpose.
 
 ### Results
