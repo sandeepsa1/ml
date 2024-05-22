@@ -87,4 +87,4 @@ Code to compare the performance of different loss functions in a neural network 
 Different activation functions in a neural network and its uses. Different activation functions sigmoid, tanh, relu, leaky relu and elu are used.
 
 ### 21-logistic-regression-using-ml-libraries-and-neural-networks
-This repository contains a simple implementation of logistic regression using machine learning approach and also a neural network to classify whether a given iris flower is of the species "Setosa" or not.
+This repository contains two simple implementations of logistic regression using machine learning approach and also a neural network to classify whether a given iris flower is of the species "Setosa" or not.
