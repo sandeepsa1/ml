@@ -24,6 +24,7 @@ Each folder within the repository are separate virtual environments representing
 - [19-different-loss-functions-of-neural-networks-a-comparison](#19-different-loss-functions-of-neural-networks-a-comparison)
 - [20-different-activation-functions-of-neural-networks-a-comparison](#20-different-activation-functions-of-neural-networks-a-comparison)
 - [21-logistic-regression-using-ml-libraries-and-neural-networks](#21-logistic-regression-using-ml-libraries-and-neural-networks)
+- [22-image-classification_relu-activation_without-ml-libraries](#22-image-classification_relu-activation_without-ml-libraries)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -88,3 +89,6 @@ Different activation functions in a neural network and its uses. Different activ
 
 ### 21-logistic-regression-using-ml-libraries-and-neural-networks
 This repository contains two simple implementations of logistic regression using machine learning approach and also a neural network to classify whether a given iris flower is of the species "Setosa" or not.
+
+### 22-image-classification_relu-activation_without-ml-libraries
+A 2 layer Neural Network designed to classify a set of images as dogs or not without using any machine learning libraries.
