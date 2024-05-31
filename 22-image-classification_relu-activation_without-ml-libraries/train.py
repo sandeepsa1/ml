@@ -2,7 +2,7 @@ import vectorize_images as im
 import nn_2layers as nn
 
 def run_training():
-    train_len = 2000
+    train_len = 1000
     train_path = "data/cats_and_dogs/training_set/"
     (X_train, Y_train) = im.generate_datavectors(train_len, train_path)
     (X_train, Y_train) = im.shuffle_data(X_train, Y_train)
@@ -17,9 +17,9 @@ def run_training():
 
     y_layer = 1
     # Change below hyper parameters to compare performances
-    h_layer = 20
-    learning_rate = 0.2
-    epochs = 10000
+    h_layer = 100
+    learning_rate = 0.014
+    epochs = 5000
     (W1, b1, W2, b2) = nn.iterate(X_train_flatten, Y_train, h_layer, y_layer, learning_rate, epochs)
     nn.save_weights_and_biases(W1, b1, W2, b2)
 

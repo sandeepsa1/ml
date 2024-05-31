@@ -60,7 +60,7 @@ def update_weights_and_biases(W1, W2, b1, b2, dW1, dW2, db1, db2, lr):
 def iterate(X_train_flatten, Y_train, h_layer, y_layer, learning_rate, epochs):
     x_layer = X_train_flatten.shape[0]
     (W1, b1, W2, b2) = set_weights_and_bias(x_layer, h_layer, y_layer)
-    m = len(X_train_flatten)
+    m = X_train_flatten.shape[1]
 
     for i in range(0, epochs):
         (Z1, A1, Z2, A2) = forward(X_train_flatten, W1, b1, W2, b2)

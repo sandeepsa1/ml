@@ -12,7 +12,7 @@ def preprocess_image(image_path, target_size=(64, 64)):
     return image_array
 
 # Fetch images from folders and vectorize and store in a single variable
-# Another variable stores labels. 1 for dogs. 0 for others
+# Another variable stores labels. 1 for cats. 0 for others
 def generate_datavectors(data_len, path):
     X = []
 
@@ -27,7 +27,7 @@ def generate_datavectors(data_len, path):
     cats_preprocessed = np.array([preprocess_image(os.path.join(folder_path, img_file)) for img_file in image_files])
 
     X = np.concatenate((dogs_preprocessed, cats_preprocessed), axis=0)
-    Y = np.array([1] * len(dogs_preprocessed) + [0] * len(cats_preprocessed))
+    Y = np.array([0] * len(dogs_preprocessed) + [1] * len(cats_preprocessed))
 
     return (X, Y)
 

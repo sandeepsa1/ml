@@ -1,5 +1,5 @@
-## A Neural Network to classify images as dogs or not
-A 2 layer Neural Network designed to classify a set of images as dogs or not. This code snippet is not using any machine learning libraries. This was developed to familiarize with the forward and backward propagation algorithms, initializing weight and bias paramaters, how to calculate costs and derivatives and updating the weights after each iteration.</br>
+## A Neural Network to classify images as cats or not
+A 2 layer Neural Network designed to classify a set of images as cats or not. This code snippet is not using any machine learning libraries. This was developed to familiarize with the forward and backward propagation algorithms, initializing weight and bias paramaters, how to calculate costs and derivatives and updating the weights after each iteration.</br>
 Code uses a 2 layer neural network. Input layer has 12288 nodes (64, 64, 3) and hidden layer is of 20 nodes with RELU activation and the output is a single node with sigmoid activation.
 
 ### Instructions
@@ -19,7 +19,7 @@ https://www.kaggle.com/datasets/tongpython/cat-and-dog
 More details inline in the code files.
 
 ### Results
-The model predicts the accuracy using test data. More than 80% accuracy is achieved. Adjust number of layers or the count of the hidden layers, learning_rate and epochs to see the performance variations.
+The model predicts the accuracy using test data. More than 70% accuracy is achieved. Adjust number of the hidden layer nodes, learning_rate and epochs to see the performance variations.
 
 #### Dependencies
 1. Python 3.x

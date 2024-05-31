@@ -2,7 +2,7 @@ import vectorize_images as im
 import nn_2layers as nn
 import numpy as np
 
-test_len = 500
+test_len = 1000
 test_path = "data/cats_and_dogs/test_set/"
 (X_test, Y_test) = im.generate_datavectors(test_len, test_path)
 (X_test, Y_test) = im.shuffle_data(X_test, Y_test)

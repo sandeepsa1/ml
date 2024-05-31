@@ -91,4 +91,4 @@ Different activation functions in a neural network and its uses. Different activ
 This repository contains two simple implementations of logistic regression using machine learning approach and also a neural network to classify whether a given iris flower is of the species "Setosa" or not.
 
 ### 22-image-classification_relu-activation_without-ml-libraries
-A 2 layer Neural Network designed to classify a set of images as dogs or not without using any machine learning libraries.
+A 2 layer Neural Network designed to classify a set of images as cats or not without using any machine learning libraries.
