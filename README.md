@@ -25,6 +25,7 @@ Each folder within the repository are separate virtual environments representing
 - [20-different-activation-functions-of-neural-networks-a-comparison](#20-different-activation-functions-of-neural-networks-a-comparison)
 - [21-logistic-regression-using-ml-libraries-and-neural-networks](#21-logistic-regression-using-ml-libraries-and-neural-networks)
 - [22-image-classification_relu-activation_without-ml-libraries](#22-image-classification_relu-activation_without-ml-libraries)
+- [23-multi-layer-neural-network_from-scratch_without-ml-libraries](#23-multi-layer-neural-network_from-scratch_without-ml-libraries)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -92,3 +93,6 @@ This repository contains two simple implementations of logistic regression using
 
 ### 22-image-classification_relu-activation_without-ml-libraries
 A 2 layer Neural Network designed to classify a set of images as cats or not without using any machine learning libraries.
+
+### 23-multi-layer-neural-network_from-scratch_without-ml-libraries
+A multi layer Neural Network with any number of hidden layers designed from scratch to classify a set of images without using any machine learning libraries.
