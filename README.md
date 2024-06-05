@@ -26,6 +26,7 @@ Each folder within the repository are separate virtual environments representing
 - [21-logistic-regression-using-ml-libraries-and-neural-networks](#21-logistic-regression-using-ml-libraries-and-neural-networks)
 - [22-image-classification_relu-activation_without-ml-libraries](#22-image-classification_relu-activation_without-ml-libraries)
 - [23-multi-layer-neural-network_from-scratch_without-ml-libraries](#23-multi-layer-neural-network_from-scratch_without-ml-libraries)
+- [24-neural-network-bias-and-variance-tuning](#24-neural-network-bias-and-variance-tuning)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -96,3 +97,6 @@ A 2 layer Neural Network designed to classify a set of images as cats or not wit
 
 ### 23-multi-layer-neural-network_from-scratch_without-ml-libraries
 A multi layer Neural Network with any number of hidden layers designed from scratch to classify a set of images without using any machine learning libraries.
+
+### 24-neural-network-bias-and-variance-tuning
+How to tune neural networks to reduce bias and variance. Reduce bias in a neural network by increasing the number of layers or nodes within each layer or increasing number of iterations. Reduce variance by increasing the number of samples or applying regularization.
