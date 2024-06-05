@@ -1,7 +1,7 @@
 ## Neural Network Bias and Variance Tuning
 This repository contains two Python scripts that demonstrate how to tune neural networks to reduce bias and variance. The first script focuses on <b>reducing bias by increasing the number of layers or iterations</b>, while the second script demonstrates <b>reducing variance by increasing the number of samples or applying regularization</b>.
 
-#### Dependencies
+### Dependencies
 1. numpy
 1. matplotlib
 1. scikit-learn
@@ -17,7 +17,8 @@ The script generates three plots:
 1. Training and validation loss for both the initial and retrained models.
 2. Data and predictions for the initial model (fewer layers/iterations).
 3. Data and predictions for the retrained model (more layers/iterations) in the same plot.</br>
-The R² scores are displayed on the prediction plots to show the model's performance.
+The R² scores are displayed on the prediction plots to show the model's performance.</br>
+Train and Test Error % are shown to get the bias and variance values.
 
 #### 2. Reducing Variance by Increasing Samples and Applying Regularization
 ##### File: reduce_variance.py</br>
@@ -36,7 +37,7 @@ The neural networks in both scripts are built using tensorflow and keras. The mo
 
 ### Evaluation Metrics
 1. <b>R² Score:</b> Indicates how well the model's predictions fit the actual data.
-2. <b>Train and Test Error %:</b> Shows bias and variance improvements
+2. <b>Train and Test Error %:</b> Shows bias and variance improvements.
 
-#### License
+### License
 This project is licensed under the MIT License.
