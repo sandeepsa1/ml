@@ -27,7 +27,7 @@ Each folder within the repository are separate virtual environments representing
 - [22-image-classification_relu-activation_without-ml-libraries](#22-image-classification_relu-activation_without-ml-libraries)
 - [23-multi-layer-neural-network_from-scratch_without-ml-libraries](#23-multi-layer-neural-network_from-scratch_without-ml-libraries)
 - [24-neural-network-bias-and-variance-tuning](#24-neural-network-bias-and-variance-tuning)
-- [25-finding-suitable-learing-rate-range](#25-finding-suitable-learing-rate-range)
+- [25-finding-best-learning-rate-range](#25-finding-best-learning-rate-range)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -102,5 +102,5 @@ A multi layer Neural Network with any number of hidden layers designed from scra
 ### 24-neural-network-bias-and-variance-tuning
 How to tune neural networks to reduce bias and variance. Reduce bias in a neural network by increasing the number of layers or nodes within each layer or increasing number of iterations. Reduce variance by increasing the number of samples or applying regularization.
 
-### 25-finding-suitable-learing-rate-range
+### 25-finding-best-learning-rate-range
 How to find the optimal learning rate range and from this range finding the most suitable learning rate.

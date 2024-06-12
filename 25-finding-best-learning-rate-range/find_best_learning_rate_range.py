@@ -17,19 +17,22 @@ def create_model():
     ])
     return model
 
+def fit_model(lr, ep):    
+    model = create_model()        
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=lr), 
+                loss='sparse_categorical_crossentropy', metrics=['accuracy'])        
+    history = model.fit(x_train, y_train, epochs=ep, batch_size=64, 
+                        validation_data=(x_test, y_test), verbose=0)
+    
+    return history
+
 def find_lr_range(lrs, ep):
     val_accs = []
     val_losses = []
 
     for lr in lrs:
         print(f"Training with learning rate: {lr}")
-        model = create_model()
-        
-        model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=lr), 
-                    loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-        
-        history = model.fit(x_train, y_train, epochs=2, batch_size=64, 
-                            validation_data=(x_test, y_test), verbose=0)
+        history = fit_model(lr, ep)
         
         val_accs.append(min(history.history['val_accuracy']))
         val_losses.append(min(history.history['val_loss']))
@@ -57,12 +60,7 @@ def find_lr_range(lrs, ep):
     return best_lr
 
 def train_model(lr, ep):
-    model = create_model()
-    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=lr),
-                    loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-    
-    history = model.fit(x_train, y_train, epochs=ep, batch_size=64,
-                        validation_data=(x_test, y_test))
+    history = fit_model(lr, ep)
     
     plt.figure(figsize=(12, 4))
     plt.subplot(1, 2, 1)
