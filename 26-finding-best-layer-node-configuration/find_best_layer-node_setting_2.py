@@ -105,14 +105,14 @@ lr = 0.001 # This is fixed. To tune learning rate, try '25-finding-best-learning
 # May need other runs with different combinations than given below, since there is no range possible and we are trying random number of layers and nodes.
 # Also note that in rare cases, for accuracy and losses, different layer-node configurations
 # may provide better results. If so, try both in the next section and select the one with less variance.
-'''epochs = 2
+epochs = 2
 # hidden_layer_nodes = [ [16], [32], [64], [128], [256], [16, 16], [16, 32], [32, 32], [32, 64], [64, 64], [128, 128] ]
 hidden_layer_nodes = [ [16, 16], [16, 32], [32, 32], [16, 16, 16], [16, 16, 32], [16, 32, 32],
                             [16, 16, 32, 32], [16, 32, 32, 64] ]
-best_node_config = find_best_node_config(hidden_layer_nodes, epochs, lr)'''
+best_node_config = find_best_node_config(hidden_layer_nodes, epochs, lr)
 
 # After finding the best configuration of number of layers and nodes within each layer (best_node_config),
 # train model using this configuration by running the below code.
-epochs = 10
+'''epochs = 10
 best_node_config =  [32, 32] # Provide best result here.
-train_model(best_node_config, epochs, lr)
+train_model(best_node_config, epochs, lr)'''
