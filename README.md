@@ -28,6 +28,7 @@ Each folder within the repository are separate virtual environments representing
 - [23-multi-layer-neural-network_from-scratch_without-ml-libraries](#23-multi-layer-neural-network_from-scratch_without-ml-libraries)
 - [24-neural-network-bias-and-variance-tuning](#24-neural-network-bias-and-variance-tuning)
 - [25-finding-best-learning-rate-range](#25-finding-best-learning-rate-range)
+- [26-finding-best-layer-node-configuration](#26-finding-best-layer-node-configuration)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -104,3 +105,6 @@ How to tune neural networks to reduce bias and variance. Reduce bias in a neural
 
 ### 25-finding-best-learning-rate-range
 How to find the optimal learning rate range and from this range finding the most suitable learning rate.
+
+### 26-finding-best-layer-node-configuration
+Finding an optimal configuration of number of hidden layers and the number of nodes within each layer.
