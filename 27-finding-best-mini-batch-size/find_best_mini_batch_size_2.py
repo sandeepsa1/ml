@@ -101,14 +101,14 @@ def train_model(mini_batch_size, ep, lr):
     print(f"Validation Loss: {history.history['val_loss'][-1]}")
 
 # Run below section to get the mini batch size.
-'''lr = 0.001
+lr = 0.001
 epochs = 2
 mini_batch_sizes = [32, 64, 128, 256, 512]
-best_mini_batch_size = find_best_mini_batch_size(mini_batch_sizes, epochs, lr)'''
+best_mini_batch_size = find_best_mini_batch_size(mini_batch_sizes, epochs, lr)
 
 # After finding the best mini batch size(best_mini_batch_size) by running above section,
 # train model using new mini batch size by running the below code.
-lr = 0.001
+'''lr = 0.001
 epochs = 10
 mini_batch_size = 32
-train_model(mini_batch_size, epochs, lr)
+train_model(mini_batch_size, epochs, lr)'''

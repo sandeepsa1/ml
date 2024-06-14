@@ -101,7 +101,7 @@ def train_model(mini_batch_size, ep, lr):
 # Run below section to get the mini batch size.
 lr = 0.001
 epochs = 5
-mini_batch_sizes = [8, 16, 32, 64, 128, 256, 512, 1024]
+mini_batch_sizes = [16, 32, 64, 128, 256, 512, 1024]
 best_mini_batch_size = find_best_mini_batch_size(mini_batch_sizes, epochs, lr)
 
 # After finding the best mini batch size(best_mini_batch_size) by running above section,
