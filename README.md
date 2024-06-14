@@ -29,6 +29,7 @@ Each folder within the repository are separate virtual environments representing
 - [24-neural-network-bias-and-variance-tuning](#24-neural-network-bias-and-variance-tuning)
 - [25-finding-best-learning-rate-range](#25-finding-best-learning-rate-range)
 - [26-finding-best-layer-node-configuration](#26-finding-best-layer-node-configuration)
+- [27-finding-best-mini-batch-size](#27-finding-best-mini-batch-size)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -108,3 +109,6 @@ How to find the optimal learning rate range and from this range finding the most
 
 ### 26-finding-best-layer-node-configuration
 Finding an optimal configuration of number of hidden layers and the number of nodes within each layer.
+
+### 27-finding-best-mini-batch-size
+Finding the best mini batch size from a set of values.
