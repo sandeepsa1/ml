@@ -30,6 +30,7 @@ Each folder within the repository are separate virtual environments representing
 - [25-finding-best-learning-rate-range](#25-finding-best-learning-rate-range)
 - [26-finding-best-layer-node-configuration](#26-finding-best-layer-node-configuration)
 - [27-finding-best-mini-batch-size](#27-finding-best-mini-batch-size)
+- [28-finding-best-hyper-parameters](#28-finding-best-hyper-parameters)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -112,3 +113,6 @@ Finding an optimal configuration of number of hidden layers and the number of no
 
 ### 27-finding-best-mini-batch-size
 Finding the best mini batch size from a set of values.
+
+### 28-finding-best-hyper-parameters
+Finding the best set of hyper parameters for a Neural Network model. The hyper parameters identified are Learning Rate, Number of Hidden Layers, Number of Nodes within each Hidden Layer, Mini Batch Size, L2 regularization and Dropout.
