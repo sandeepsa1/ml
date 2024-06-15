@@ -29,7 +29,7 @@ The code repository contains two Python scripts that demonstrate how to find the
 4. Run the Python scripts. Refer Steps for further details.
 
 ### Steps
-1. Provide a set of possible values for the hyper parameters Learning Rate, Number of Hidden Layers and Nodes, Mini Batch Size, L2 Regularization and Dropout. Keep number of epochs as 1 or 2. Then run 'find_best_params' function to find the best combination.<b> Note that Step 1 will take more time to complete if the number of combinations are more.</b>. To reduce execution time, the better approach is to skip regularization check in Step 1 by setting 'l2_factors' and 'dropout_rates' to [0]. Then use the best 1 or 2 results of Step 1 in Step 2 to find good regularizations (using more epochs).
+1. Provide a set of possible values for the hyper parameters Learning Rate, Number of Hidden Layers and Nodes, Mini Batch Size, L2 Regularization and Dropout. Keep number of epochs as 1 or 2. Then run 'find_best_params' function to find the best combination.<b> Note that Step 1 will take more time to complete if the number of combinations are more.</b> To reduce execution time, the better approach is to skip regularization check in Step 1 by setting 'l2_factors' and 'dropout_rates' to [0]. Then use the best 1 or 2 results of Step 1 in Step 2 to find good regularizations (using more epochs).
 2. Finds if applying regularization improves performance by trying different combinations of L2 and Dropout. This step is done on more number of epochs.
 3. Train model using the best configuration identified from Step 1 and Step 2.
 
