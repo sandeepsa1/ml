@@ -61,7 +61,6 @@ def find_best_params(lrs, mini_batch_sizes, hidden_layer_nodes, l2_factors, drop
 
                         val_accs.append(min(history.history['val_accuracy']))
                         val_losses.append(min(history.history['val_loss']))
-
                         node_labels.append(f"{lr}, {batch}, [{','.join(map(str, nodes))}], {l2}, {drop}")
             
     plt.figure(figsize=(12, 8))
@@ -88,7 +87,6 @@ def find_best_params(lrs, mini_batch_sizes, hidden_layer_nodes, l2_factors, drop
     plt.ylabel('Min Loss')
     
     plt.xticks(ticks=range(len(node_labels)), labels=[label if i % tick_size == 0 else '' for i, label in enumerate(node_labels)])
-    # Show best loss in the plot.
     best_index2 = val_losses.index(min(val_losses))
     plt.annotate(f'Best hyper parameters: ({node_labels[best_index2]})\nLoss: {round(val_losses[best_index2], 3)}',
                  (node_labels[best_index2], val_losses[best_index2]), textcoords="offset points", xytext=(0,15), ha='center', color='brown')
@@ -101,6 +99,7 @@ def find_best_params(lrs, mini_batch_sizes, hidden_layer_nodes, l2_factors, drop
     print(f"Best hyper Parameters: {best_hyper_parameters}")
     print(f"Best accuracy: {best_acc}")
     return best_hyper_parameters
+
 
 
 def train_model(lr, batch, layer_node, ep):
@@ -151,8 +150,8 @@ best_params = find_best_params(lrs, mini_batch_sizes, hidden_layer_nodes, l2_fac
 # Step 2: This step can be used to get faster results instead of trying regularizations on all models.
 # Here we try different regularizations on the best 1 or 2 models from step 1 with more epochs.
 # Set l2_factors and dropout_rates to [0] in Step 1 and run it before trying this.
-# Execution time in colab : 14 min
-'''epochs = 30
+# Execution time in colab : 2 hours
+'''epochs = 10
 lrs = [0.001]
 mini_batch_sizes = [64]
 hidden_layer_nodes = [ [32, 32] ]
@@ -161,16 +160,16 @@ dropout_rates = [0, 0.1, 0.2]
 best_params = find_best_params(lrs, mini_batch_sizes, hidden_layer_nodes, l2_factors, dropout_rates, epochs)'''
 
 # Step 3: Train model using the best configuration.
-# Execution time in colab : 1.30 min
+# Execution time in colab : 30 min
 # Results for below configuration:
-# Training Accuracy: 0.9744499921798706
-# Training Loss: 0.081198550760746
-# Validation Accuracy: 0.9595000147819519
-# Validation Loss: 0.18970607221126556
-'''epochs = 50
-lr = 0.1
-batch = 128
-layer_node = [50, 70]
-l2_factors = [1e-4]
-dropout_rates = [0]
+# Training Accuracy: 0.9732000231742859
+# Training Loss: 0.08016588538885117
+# Validation Accuracy: 0.6935999989509583
+# Validation Loss: 2.8965625762939453
+'''epochs = 20
+lr = 0.001
+batch = 64
+layer_node = [32, 32]
+l2_factors = [0]
+dropout_rates = [0.2]
 train_model(lr, batch, layer_node, epochs)'''
