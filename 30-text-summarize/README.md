@@ -5,6 +5,7 @@ A sample Python script to summarize text using a pre-trained model from Hugging 
 1. transformers
 2. tensorflow
 3. torch
+4. tf-keras
 
 ### Instructions
 1. Clone this repository to your local machine.
