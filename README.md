@@ -32,6 +32,7 @@ Each folder within the repository are separate virtual environments representing
 - [27-finding-best-mini-batch-size](#27-finding-best-mini-batch-size)
 - [28-finding-best-hyper-parameters](#28-finding-best-hyper-parameters)
 - [29-multitask-learning](#29-multitask-learning)
+- [30-text-summarize](#30-text-summarize)
 
 ## Details
 ### 01-perceptron-predict-within-a-square
@@ -120,3 +121,6 @@ Finding the best set of hyper parameters for a Neural Network model. The hyper p
 
 ### 29-multitask-learning
 This project demonstrates how to build and train a multitask learning model using the MNIST dataset. The model predicts both the digit and whether the digit is even or odd, using the same model.
+
+### 30-text-summarize
+A sample Python script to summarize text using a pre-trained model from Hugging Face with TensorFlow.
